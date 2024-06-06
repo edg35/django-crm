@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lead Detail</title>
+    <link rel="stylesheet" href="path/to/your/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>This is the details for {{ lead.first_name}}
+    </header>
+    <main>
+      <div>
+        <div class="lead">
+          <p>First Name: {{ lead.first_name }}</p>
+          <p>Last Name: {{ lead.last_name }}</p>
+          <p>Age: {{ lead.age }}</p>
+        </div>
+        <a href="/leads"> Back to leads page</a>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Your footer content goes here -->
+    </footer>
+
+    <script src="path/to/your/js/scripts.js"></script>
+  </body>
+</html>

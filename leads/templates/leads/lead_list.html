@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="path/to/your/css/styles.css" />
+    <style>
+      /* Your custom styles go here */
+      .lead {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-top: 10px;
+        background-color: #f4f4f4;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>This is all our leads</header>
+
+    <main>
+      <div>
+        {% for lead in leads %}
+        <div class="lead">
+          <a href="/leads/{{ lead.pk }}">
+            {{ lead.first_name }} {{ lead.last_name }} </a
+          >. Age: {{ lead.age }}
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+
+    <footer>
+      <!-- Your footer content goes here -->
+    </footer>
+  </body>
+</html>

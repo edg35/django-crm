@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lead Create</title>
+    <link rel="stylesheet" href="path/to/your/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Your header content goes here -->
+      <a href="/leads">Go back to leads</a>
+      <h1>Create Lead</h1>
+    </header>
+
+    <main>
+      <!-- Your main content goes here -->
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="submit">Create</button>
+      </from>
+    </main>
+
+    <footer>
+      <!-- Your footer content goes here -->
+    </footer>
+
+    <script src="path/to/your/js/scripts.js"></script>
+  </body>
+</html>

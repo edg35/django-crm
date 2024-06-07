@@ -17,8 +17,12 @@
           <p>First Name: {{ lead.first_name }}</p>
           <p>Last Name: {{ lead.last_name }}</p>
           <p>Age: {{ lead.age }}</p>
+          <p>Agent: {{ lead.agent }}</p>
         </div>
-        <a href="/leads"> Back to leads page</a>
+        <a href="{%  url 'leads:lead-list' %}"> Back to leads page</a>
+        <hr />
+        <a href="{% url 'leads:lead-update' lead.pk %}">Update</a>
+        <a href="{% url 'leads:lead-delete' lead.pk %}">Delete</a>
       </div>
     </main>
 

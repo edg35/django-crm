@@ -9,8 +9,8 @@
   <body>
     <header>
       <!-- Your header content goes here -->
-      <a href="{% url 'leads:lead-list' %}">Go back to leads</a>
-      <h1>Create Lead</h1>
+      <a href="{% url 'leads:lead-detail' lead.pk %}">Go back to {{ lead.first_name }}</a>
+      <h1>Update Lead: {{ lead.first_name }} {{ lead.last_name }}</h1>
     </header>
 
     <main>

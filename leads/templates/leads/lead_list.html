@@ -24,9 +24,11 @@
 
     <main>
       <div>
+        <a href="{% url 'leads:lead-create' %}"> Create a new lead</a>
+        <hr />
         {% for lead in leads %}
         <div class="lead">
-          <a href="/leads/{{ lead.pk }}">
+          <a href="{% url 'leads:lead-detail' lead.pk %}">
             {{ lead.first_name }} {{ lead.last_name }} </a
           >. Age: {{ lead.age }}
         </div>

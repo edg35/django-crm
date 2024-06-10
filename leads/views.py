@@ -1,8 +1,17 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
+from django.views.generic import TemplateView
 
 from .forms import LeadForm, LeadModelForm
 from .models import Agent, Lead
+
+
+class LandingPageView(TemplateView):
+    template_name = 'landing.html'
+
+
+def landing_page(request):
+    return render(request, "landing.html")
 
 
 def lead_list(request):

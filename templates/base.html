@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DJCRM</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
   </head>
   <body>
     {% include 'navbar.html' %} {% block content %}{% endblock content %}

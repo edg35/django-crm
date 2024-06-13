@@ -28,7 +28,7 @@
         >Leads</a
       >
       {% if not request.user.is_authenticated %}
-      <a class="mr-5 hover:text-gray-900">Sign Up</a>
+      <a href="{% url 'signup' %}" class="mr-5 hover:text-gray-900">Sign Up</a>
       {% endif %}
     </nav>
     {% if request.user.is_authenticated %} Hello, {{ request.user.username }}

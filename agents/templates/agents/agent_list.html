@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Here are our agents</h1>
+
+{% for agent in agents %}
+
+<h2>{{ agent.user.username }}</h2>
+
+{% endfor %} {% endblock content %}
